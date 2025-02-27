@@ -1,4 +1,4 @@
-FROM python:3.12-slim AS builder
+FROM python:3.11-slim AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 
 RUN ~/.local/bin/poetry export -f requirements.txt --output requirements.txt
 
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
